@@ -1,14 +1,15 @@
+from jerarquicas.abin_bus import ArbolBinario_Bus
 from jerarquicas.nodos import NodoArbol_Bin_Obj
 if __name__ == "__main__" and __package__ is None:
    from nodos import NodoArbol_Bin_Obj
 else:
     from jerarquicas.nodos import NodoArbol_Bin_Obj
-class ArbolBinObj:
+class ArbolBinObj(ArbolBinario_Bus):
     def __init__(self) -> None:
         self.raiz = None
 
     def adicionar(self, nueva_clave, valor):
-        return self.__adicionar(self.raiz, nueva_clave, valor)
+        self.raiz = self.__adicionar(self.raiz, nueva_clave, valor)
 
     def __adicionar(self, sub_arbol, nueva_clave, valor):
         if not sub_arbol:
@@ -37,4 +38,3 @@ class ArbolBinObj:
                 if clave_der:
                     return clave_der   
         return None  
-
