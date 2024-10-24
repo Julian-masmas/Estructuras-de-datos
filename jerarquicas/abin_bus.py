@@ -77,5 +77,3 @@ class ArbolBinario_Bus(ArbolBin):
             el hijo MENOR de los mayores, by default True
         """
         pass
-
-
